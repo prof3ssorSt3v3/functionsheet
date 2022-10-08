@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Cheatsheet</title>
+    <link rel="stylesheet" href="function.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Function Cheatsheet</h1>
+    </header>
+    <main>
+      <h2 class="regular">Regular Functions</h2>
+      <h2 class="arrow">Arrow Functions</h2>
+
+      <div class="box regular">
+        <p>Regular function with no return keyword</p>
+        <pre><code>
+      function f(){
+        //returns undefined
+      }
+      </code></pre>
+      </div>
+      <div class="box arrow">
+        <p>Arrow function with no return keyword.</p>
+        <pre><code>
+      const f = () => {
+        //returns undefined
+      }
+      </code></pre>
+      </div>
+
+      <div class="box regular">
+        <p>Regular function with return keyword.</p>
+        <pre><code>
+      function f(){
+        return true;
+      }
+      </code></pre>
+      </div>
+      <div class="box arrow">
+        <p>Arrow function with return keyword inside curly braces.</p>
+        <pre><code>
+      const f = () => {
+        return true;
+      }
+      </code></pre>
+        <p>Arrow function with return value but no curly braces.</p>
+        <pre><code>
+      const f = () => true;
+      </code></pre>
+      </div>
+
+      <div class="box regular">
+        <p>Regular function with single parameter and return value.</p>
+        <pre><code>
+      function f(name){
+        return name.toUpperCase();
+      }
+      </code></pre>
+      </div>
+      <div class="box arrow">
+        <p>Arrow function with single parameter and return value.</p>
+        <pre><code>
+      const f = name => {
+        return name.toUpperCase();
+      }
+      </code></pre>
+        <p>
+          Arrow function with single parameter and return value but no curly
+          braces.
+        </p>
+        <pre><code>
+      const f = name => name.toUpperCase();
+      </code></pre>
+      </div>
+
+      <div class="box regular">
+        <p>
+          Regular function with multiple parameters and default values,
+          returning true.
+        </p>
+        <pre><code>
+      function f(isAlive=true, department=42){
+        return true;
+      }
+      </code></pre>
+      </div>
+      <div class="box arrow">
+        <p>
+          Arrow function with multiple parameters and default values, returning
+          true.
+        </p>
+        <pre><code>
+      const f = (isAlive=true, department=42) => true;
+      </code></pre>
+      </div>
+
+      <div class="box regular">
+        <p>Regular IIFE that accepts parameters.</p>
+        <pre><code>
+      (function f(name, message){
+        console.log(`${name} says ${message}`);
+      })('Sheldon', 'Bazinga');
+      </code></pre>
+      </div>
+      <div class="box arrow">
+        <p>Arrow IIFE that accepts parameters.</p>
+        <pre><code>
+      ((name, message)=>{
+        console.log(`${name} says ${message}`);
+      })('Sheldon', 'Bazinga');
+      </code></pre>
+      </div>
+    </main>
+  </body>
+</html>
