@@ -147,10 +147,42 @@
           }
         }
         </code></pre>
-        <p>Arrow function returning an object in single line.</p>
+        <p>
+          Arrow function returning an object in single line requires
+          parentheses.
+        </p>
         <pre><code>
         const f = () =>( { id: 123, name: 'Steve' } );
         </code></pre>
+      </div>
+
+      <div class="box regular">
+        <p>Regular function destructuring an object as a parameter.</p>
+        <pre><code>
+      function f({id, name}){
+        //id and name are now local variables inside this function
+      }
+
+      let myObj = {
+        id: 123,
+        name: 'Steve'
+      }
+      f(myObj);
+      </code></pre>
+      </div>
+      <div class="box arrow">
+        <p>Arrow function destructuring an object as a parameter.</p>
+        <pre><code>
+      const f = ({id, name}) =>{
+        //id and name are now local variables inside this function
+      }
+
+      let myObj = {
+        id: 123,
+        name: 'Steve'
+      }
+      f(myObj);
+      </code></pre>
       </div>
     </main>
   </body>
