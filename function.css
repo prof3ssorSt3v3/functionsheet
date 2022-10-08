@@ -26,6 +26,7 @@ main {
 }
 main h2 {
   padding: 1rem 3rem;
+  font-weight: 300;
 }
 .box {
   padding: 1rem;
