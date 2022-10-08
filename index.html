@@ -26,7 +26,7 @@
       <div class="box arrow">
         <p>Arrow function with no return keyword.</p>
         <pre><code>
-      const f = () => {
+      const f = () =>{
         //returns undefined
       }
       </code></pre>
@@ -113,6 +113,43 @@
         console.log(`${name} says ${message}`);
       })('Sheldon', 'Bazinga');
       </code></pre>
+      </div>
+
+      <div class="box regular">
+        <p>Regular function returning an object.</p>
+        <pre><code>
+      function f(){
+        return {
+          id: 123,
+          name: 'Steve'
+        }
+      }
+      </code></pre>
+        <pre><code>
+        function f(){
+          return (
+            {
+              id: 123,
+              name: 'Steve'
+            }
+          )
+        }
+        </code></pre>
+      </div>
+      <div class="box arrow">
+        <p>Arrow function returning an object.</p>
+        <pre><code>
+        const f = () =>{
+          return {
+            id: 123,
+            name: 'Steve'
+          }
+        }
+        </code></pre>
+        <p>Arrow function returning an object in single line.</p>
+        <pre><code>
+        const f = () =>( { id: 123, name: 'Steve' } );
+        </code></pre>
       </div>
     </main>
   </body>
