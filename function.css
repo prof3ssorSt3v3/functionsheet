@@ -22,17 +22,19 @@ header {
 }
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width:100%;
 }
 main h2 {
   padding: 1rem 3rem;
   font-weight: 300;
 }
 .box {
-  padding: 1rem;
+  padding: 1rem; 
+  border-radius: 3px;
 }
-.box p {
+.box p, .box code {
   font-weight: 300;
   padding: 0.5rem 1rem;
   margin: 0;
@@ -44,4 +46,14 @@ main h2 {
 .arrow {
   background-color: hsl(200, 66%, 63%);
   color: #222;
+}
+
+code { 
+ white-space: pre-wrap;
+}
+
+ @media screen and (max-width: 600px) {
+ main  {
+    grid-template-columns: 1fr;
+  }
 }
